@@ -1,0 +1,102 @@
+/* General Body Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arimo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/house-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Add a semi-transparent overlay */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance contrast */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Start from the top, allowing the content to grow */
+    padding-top: 40px; /* Add padding at the top to ensure form is not cut off */
+    box-sizing: border-box;
+}
+
+/* Styling for the Login Box with transparent dark grey background */
+.login {
+    background-color: rgba(34, 34, 34, 0.8); /* Transparent dark grey background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    width: 400px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Heading Styling */
+.login h1 {
+    font-family: 'Pacifico', cursive;
+    color: #4a90e2;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Input Field Styling - with white background */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid rgba(204, 204, 204, 0.7); /* Light grey border */
+    background-color: #ffffff; /* Solid white background */
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Hind', sans-serif;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Add some transition to buttons */
+button, input {
+    transition: all 0.3s ease;
+}
+
+/* On focus - Adjusted to match white background */
+input:focus {
+    outline: none;
+    border-color: rgba(74, 144, 226, 0.8); /* Blue border with some transparency */
+    background-color: #ffffff; /* Keep white background on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Prediction Text Styling */
+.prediction {
+    color: white;  /* Set the prediction text color to white */
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Ensure layout is mobile-friendly */
+@media (max-width: 500px) {
+    .login {
+        width: 90%;  /* Reduce width for small screens */
+    }
+}

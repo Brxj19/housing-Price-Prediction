@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API - Housing Price Prediction</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="login">
+            <h1>Housing Price Prediction</h1>
+
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}" method="post">
+                <input type="text" name="crim" placeholder="per capita crime rate by town" required="required" />
+                <input type="text" name="zn" placeholder="proportion of residential land zoned for lots over 25,000 sq.ft." required="required" />
+                <input type="text" name="indus" placeholder="proportion of non-retail business acres per town" required="required" /><br>
+                <input type="text" name="chas" placeholder="Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)" required="required" />
+                <input type="text" name="nox" placeholder="nitric oxides concentration (parts per 10 million)" required="required" />
+                <input type="text" name="rm" placeholder="average number of rooms per dwelling" required="required" /><br>
+                <input type="text" name="age" placeholder="proportion of owner-occupied units built prior to 1940" required="required" />
+                <input type="text" name="dis" placeholder="weighted distances to five employment centres" required="required" />
+                <input type="text" name="rad" placeholder="index of accessibility to radial highways" required="required" /><br>
+                <input type="text" name="tax" placeholder="full-value property-tax rate per $10,000" required="required" />
+                <input type="text" name="ptratio" placeholder="pupil-teacher ratio by town" required="required" />
+                <input type="text" name="b" placeholder="1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town" required="required" /><br>
+                <input type="text" name="lstat" placeholder="% lower status of the population" required="required" /><br>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+
+            <br><br>
+            <p class="prediction">{{ prediction_text }}</p>
+
+        </div>
+    </div>
+</body>
+
+</html>
