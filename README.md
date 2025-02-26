@@ -13,3 +13,6 @@ $ python3 -m venv .venv
 activate the new virtual environment named as .venv
 ---
 $ source .venv/bin/activate
+
+# link to the project
+[project link](https://housing-price-prediction-g9js.onrender.com/)
